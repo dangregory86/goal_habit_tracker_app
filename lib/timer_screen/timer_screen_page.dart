@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 class TimerPage extends StatefulWidget {
-  TimerPage({Key key, this.title}) : super(key: key);
+  TimerPage({this.title}) : super(key: key);
 
   final String title;
 

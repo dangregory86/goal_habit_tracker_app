@@ -76,8 +76,22 @@ class _SliceAnimatedListState extends State<SliceAnimatedList> {
         height: 128.0,
         child: Card(
           color: Colors.primaries[item % Colors.primaries.length],
-          child: Center(
-            child: Text('Item $item', style: textStyle),
+          child: Row(
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Text('Item $item', style: textStyle),
+              Spacer(),
+              RaisedButton(onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => TimerPage(
+                      title: 'timer',
+                    ),
+                  ),
+                );
+              })
+            ],
           ),
         ),
       ),
